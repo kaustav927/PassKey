@@ -9,17 +9,13 @@ export default function Home() {
   if(!isAuthenticated) return <Login/>;
 
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>PassKey</title>
-        <meta name="description" />
-       
-      </Head>
-
-      
-      <div>
-        <button onClick={isAuthenticated=true}>Login</button> 
-      </div>
-    </div>
+    <Login/>
   )
 }
+/*
+<div className="w-1/2 px-20 py-12 mx-auto bg-slate-200">
+            <h2 className="text-3xl font-bold mb-2"> Title</h2>
+              <button className="border-2 border-slate-300 px-12 py-2">Google</button>
+
+          </div>
+*/
