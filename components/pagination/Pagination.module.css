@@ -1,0 +1,37 @@
+.pageList{
+    overflow: hidden;
+    margin-top: 0;
+    color: rgb(79, 91, 112);
+    padding-left: 6%;
+}
+
+.pageList > li{
+    width: 300px;
+    line-height: 40px;
+    list-style: none;
+    float: left;
+}
+
+.pageList > .activePass {
+    width: 57%;
+}
+
+.pageList > .rows {
+    width: 13%;
+}
+
+.pageList > .passItems {
+    width: 10%;
+}
+
+.pageList > .leftButton {
+    width: 6%;
+    color: rgb(79, 91, 112);
+    background: url ('../../img/left.png');
+}
+
+.pageList > .rightButton {
+    width: 4%;
+    color: rgb(79, 91, 112);
+    background: url ('../../img/right.png');
+}

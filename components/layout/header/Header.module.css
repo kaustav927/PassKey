@@ -1,0 +1,15 @@
+.header1{
+    background: rgb(65, 188, 69);
+    height: 7%;
+}
+
+.header1 > .logo {
+    width: 48px;
+    margin-left: 60px;
+}
+
+.header2{
+    background: url('../../../img/background.png');
+    background-position: 8px;
+    height: 7%;
+}

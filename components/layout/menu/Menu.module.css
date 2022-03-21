@@ -1,0 +1,82 @@
+.sidebar{
+    background: rgb(43, 58, 44);
+    width: 18%;
+    height: 100%;
+    z-index: 500;
+    position: absolute;
+}
+
+.sidebar > .button{
+    border-radius: 5%;
+    background: rgb(43, 58, 44);
+    height: 7%;
+    width: 13%;
+    position: relative;
+    left: 100%;
+    color: #fff;
+    font-size: 20px;
+}
+
+.sidebar > .menuItems{
+    height: 92.7%;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 21.5px;
+    line-height: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sidebar > .menuItems > a{
+    display: inline-block;
+    width: 100%;
+    height: 10%;
+    text-indent: 85px;
+    line-height: 67px;
+}
+
+.sidebar > .menuItems > a:hover{
+    color: rgba(255, 255, 255, 1);
+}
+
+.sidebar > .menuItems > a:nth-child(1){
+    background: url('../../../img/home.png') no-repeat;
+    background-size: 32px;
+    background-position: 25px 17px;
+}
+
+.sidebar > .menuItems > a:nth-child(2){
+    background: url('../../../img/password.png') no-repeat;
+    background-size: 32px;
+    background-position: 25px 17px;
+}
+
+.sidebar > .menuItems > a:nth-child(3){
+    background: url('../../../img/addKey.png') no-repeat;
+    background-size: 32px;
+    background-position: 25px 17px;
+}
+
+.sidebar > .menuItems > a:nth-child(4){
+    background: url('../../../img/generateKey.png') no-repeat;
+    background-size: 32px;
+    background-position: 25px 17px;
+}
+
+.sidebar > .menuItems > a:nth-child(5){
+    background: url('../../../img/backup.png') no-repeat;
+    background-size: 32px;
+    background-position: 25px 17px;
+}
+
+.sidebar > .menuItems > a:nth-child(6){
+    margin-top: 68%;
+    background: url('../../../img/dashboard.png') no-repeat;
+    background-size: 32px;
+    background-position: 25px 17px;
+}
+
+.sidebar > .menuItems > a:nth-child(7){
+    background: url('../../../img/settings.png') no-repeat;
+    background-size: 32px;
+    background-position: 25px 17px;
+}
