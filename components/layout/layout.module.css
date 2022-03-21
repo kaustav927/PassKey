@@ -1,0 +1,17 @@
+.frame{
+    height: 752px;
+    position: relative;
+}
+
+.content {
+    height: 752px;
+    width: 100%;
+    position: absolute;
+    top:0;
+}
+
+.mainFrame{
+    height: 79%;
+    border: 1px solid transparent;
+}
+
