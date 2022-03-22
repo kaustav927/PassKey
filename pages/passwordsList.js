@@ -1,8 +1,8 @@
-import Layout from '../../components/layout/Layout';
-import {paginate} from '../../core/utils/paginate';
-import PasswordItem from '../../components/passwordItem/index';
+import Layout from '../components/layout/Layout';
+import {paginate} from '../core/utils/paginate';
+import PasswordItem from '../components/passwordItem/index';
 import classes from './PasswordsList.module.css';
-import Pagination from '../../components/pagination/index';
+import Pagination from '../components/pagination/index';
 import {useState} from 'react';
 
 //dummy passwords list
