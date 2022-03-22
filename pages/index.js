@@ -1,5 +1,5 @@
-import Layout from '../../components/layout/Layout';
-import Login from '../login/index';
+import Layout from '../components/layout/Layout';
+import Login from './login';
 import React, {useState} from "react";
 
 const Home = () => {

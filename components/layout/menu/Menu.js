@@ -20,7 +20,7 @@ const Menu = () => {
                 <button className = {classes.button} onClick={ShowMenuHandler}> {'>>'} </button>
            
                 <div className={classes.menuItems}>
-                    <Link href="/home" >
+                    <Link href="/" >
                         Home
                     </Link>
                     <Link href="/passwordsList" >
