@@ -4,7 +4,7 @@ import Image from 'next/image';
 import editImage from '../../img/edit.png';
 import deleteImage from '../../img/delete.png';
 
-const PasswordItem = (props) => {
+const PasswordRow = (props) => {
 
   
     
@@ -26,13 +26,17 @@ const PasswordItem = (props) => {
                     </button>
                 </Link>
             </li>
-            <li className={classes.deletePass}><Image src={deleteImage} width='28%' height='28%' /></li>
+            <li className={classes.deletePass}>
+                <button onClick={()=>props.onDelete(props.passwordInfo.id)}>
+                    <Image src={deleteImage} width='28%' height='28%' />    
+                </button>
+            </li>
             <li className={classes.options}> . . . </li>
         </ul>  
     );
 }
 
-export default PasswordItem;
+export default PasswordRow;
 
 /**
  * This component renders each password item in the passwords list/table.
