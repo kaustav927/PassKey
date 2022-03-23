@@ -26,7 +26,11 @@ const PasswordRow = (props) => {
                     </button>
                 </Link>
             </li>
-            <li className={classes.deletePass}><Image src={deleteImage} width='28%' height='28%' /></li>
+            <li className={classes.deletePass}>
+                <button onClick={()=>props.onDelete(props.passwordInfo.id)}>
+                    <Image src={deleteImage} width='28%' height='28%' />    
+                </button>
+            </li>
             <li className={classes.options}> . . . </li>
         </ul>  
     );
