@@ -4,7 +4,7 @@ import Image from 'next/image';
 import editImage from '../../img/edit.png';
 import deleteImage from '../../img/delete.png';
 
-const PasswordItem = (props) => {
+const PasswordRow = (props) => {
 
   
     
@@ -32,7 +32,7 @@ const PasswordItem = (props) => {
     );
 }
 
-export default PasswordItem;
+export default PasswordRow;
 
 /**
  * This component renders each password item in the passwords list/table.

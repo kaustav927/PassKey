@@ -1,6 +1,6 @@
 import Layout from '../components/layout/Layout';
 import {paginate} from '../core/utils/paginate';
-import PasswordItem from '../components/passwordItem/PasswordRow';
+import PasswordRow from '../components/passwordItem/PasswordRow';
 import classes from './PasswordsList.module.css';
 import Pagination from '../components/pagination/index';
 import {useState} from 'react';
@@ -28,8 +28,7 @@ const PasswordsList = () => {
     const [openEdit, setEdit]=useState(false)
     const [topMostPassIndex, setTopMostPassIndex] = useState(0); 
   //saves the index of top most password element on the page
-    let pageSize = 6;                                              //number of password elements per page
-
+    let pageSize = 6;                                              //number of password elements per page                                      //current password id
     //getting the new index for first password element that should be displayed at top of the page  
     //(after user clicked on the right/left button)
     const topMostIndexHandler = (page) => { 
@@ -43,19 +42,30 @@ const PasswordsList = () => {
     const otherPagesPass = paginate(dummy_passwords, topMostPassIndex, pageSize);
     
     const onEditClick = (id) => {
-        
         console.log(id);
         setEdit(true)
-  
+    }
+
+    const onEditClose = (id) => {
+        console.log('close' ,id)
+        setEdit(false)
+    }
+    const onEditSave = (id) => {
+        console.log('save' ,id)
+        var answer = window.confirm("Save data?");
+        if (answer) {
+            setEdit(false)
+        }
+        else {
+            setEdit(true)
+        }
     }
 
     return(
-        <>
-        {openEdit && <EditModal/>}
-        <Layout
-        footerComponent={ <Pagination topMostIndexHandler={topMostIndexHandler} passwordsInfo={dummy_passwords} pageSize={pageSize} address={'passwordsList'} topMostPassIndex={topMostPassIndex}/>}>
         
-            <ul className={classes.passwordTable}>  
+        <Layout footerComponent={ <Pagination topMostIndexHandler={topMostIndexHandler} passwordsInfo={dummy_passwords} pageSize={pageSize} address={'passwordsList'} topMostPassIndex={topMostPassIndex}/>}>
+        {openEdit ? <EditModal isOpen={openEdit} onEditClose={onEditClose}/> :
+        <ul className={classes.passwordTable}>  
                 <li className={classes.header}>
                     <ul>
                         <li className={classes.passName}>Name<button></button></li>
@@ -64,13 +74,15 @@ const PasswordsList = () => {
                         <li className={classes.options}> . . . </li>
                     </ul>    
                 </li>      
-                {(topMostPassIndex == 0) && (firstPagePass.map(listItem => <li key={listItem.id} className={classes.program}><PasswordItem passwordInfo={listItem} onEditClick={onEditClick}></PasswordItem></li>))}
+                {(topMostPassIndex == 0) && (firstPagePass.map(listItem => <li key={listItem.id} className={classes.program}><PasswordRow passwordInfo={listItem} onEditClick={onEditClick} onEditSave={onEditSave}></PasswordRow></li>))}
                 {(0 < topMostPassIndex) && (topMostPassIndex < dummy_passwords.length) && (otherPagesPass.map(listItem => <li key={listItem.id} className={classes.program}><PasswordItem passwordInfo={listItem}></PasswordItem></li>))}             
             </ul>
+        }
+        
+            
          
         </Layout>
         
-        </>
      
     );
 };
