@@ -1,4 +1,5 @@
 import React from 'react'
+import DataHandler from './DataHandler'
 //import {Fa} from 'react-icons/fa'
 function Login() {
     
@@ -30,6 +31,7 @@ function Login() {
               </div>
          
             <button className="mt-4 border-2 border-slate-300 px-12 py-2 hover:bg-slate-200 hover:text-black">Sign in</button>
+            <button onClick= "DataHandler('VB94o2tMLgmy3TPi9ewy', 'add')" >Test</button>
           </div>
 
           
