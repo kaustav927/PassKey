@@ -9,13 +9,13 @@ const Menu = () => {
 
     //This function changes the state of sidebar whenever the user clicks the button to close/open it 
     const ShowMenuHandler = () => {
-        showSidebar ? setShowSidebar(false) : setShowSidebar(true);
+            showSidebar ? setShowSidebar(false) : setShowSidebar(true);
     };
 
     return(
         <Fragment>
-            <div className={classes.sidebar}
-            style={{ right: showSidebar ? "82%" : "100%", transition: "1s" }}>
+            <div className={classes.sidebar} id={classes.sidebarId}
+            style={{ right: showSidebar ? "117.5%" : "84%", transition: "1s" }}>
             
                 <button className = {classes.button} onClick={ShowMenuHandler}> {'>>'} </button>
            

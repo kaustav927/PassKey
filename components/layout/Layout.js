@@ -8,7 +8,7 @@ import Router from 'next/router'
 
 const Layout = ({children,footerComponent, headerComponent}) => {
 
-    /*useEffect(() => {
+    /**useEffect(() => {
         const {pathname} = Router;
         if(pathname == '/' ){
             Router.push('/home')

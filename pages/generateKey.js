@@ -6,8 +6,6 @@ const GenerateKey = () => {
         <Layout>
             <h3>GenerateKey</h3>
         </Layout>
-        
-        
     );
 };
 

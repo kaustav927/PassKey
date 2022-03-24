@@ -8,8 +8,30 @@
     margin-left: 60px;
 }
 
+.header1 > .userIcon{
+    width: 12%;
+    height: 80%;
+    float: right;
+    margin-top: 4px;
+    overflow: hidden;
+    color: #fff;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+.header1 > .userIcon > .userimage{
+    display: inline-block;
+}
+
 .header2{
     background: url('../../../img/background.png');
     background-position: 8px;
     height: 7%;
+    visibility: hidden;
+}
+
+@media screen and (max-width: 700px) {
+    .header1 > .userIcon{
+        width: 20%;
+    }
 }

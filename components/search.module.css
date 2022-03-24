@@ -1,0 +1,40 @@
+.searchFrame{
+    margin-left: 18%;
+    width: 17.5%;
+    border-radius: 30px;
+    height: 38px;
+    margin-bottom: -80px;
+    margin-top: 30px;
+}
+
+.searchFrame > .searchInput {
+    display: inline-block;
+    width: 80%;
+    height: 30px;
+    border: none;
+    border-radius: 30px;
+    margin-top: 1%;
+}
+
+.searchFrame > .searchBtn{
+    margin-left: 5px;
+    border: none;
+    box-shadow: none;
+    float: left;
+}
+
+@media screen and (max-width: 700px) {
+    .searchFrame{
+        width: 37%;
+        margin-left: 6%;
+    }
+
+    .searchFrame > .searchInput {
+        float: right;
+    }
+
+    .searchFrame > .searchBtn{
+        margin-left: 3px;
+    }
+    
+}
