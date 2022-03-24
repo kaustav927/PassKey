@@ -24,14 +24,48 @@
     width: 10%;
 }
 
+.pageList > .leftButton:hover{
+    color: #fff; 
+}
+
 .pageList > .leftButton {
     width: 6%;
     color: rgb(79, 91, 112);
     background: url ('../../img/left.png');
 }
 
+.pageList > .rightButton:hover{
+    color: #fff; 
+}
+
 .pageList > .rightButton {
     width: 4%;
     color: rgb(79, 91, 112);
     background: url ('../../img/right.png');
+}
+
+.pageList > .rightButton > a,
+.pageList > .leftButton > a{
+    text-decoration: none;
+    color: rgb(79, 91, 112);
+}
+
+@media screen and (max-width: 700px) {
+    .pageList > .activePass {
+        width: 48%;
+        font-size: 15px;
+        line-height: 42px;
+    }
+    
+    .pageList > .rows {
+        width: 13%;
+        line-height: 42px;
+        font-size: 16px;
+    }
+    
+    .pageList > .passItems {
+        width: 19%;
+        font-size: 15px;
+        line-height: 45px;
+    }
 }

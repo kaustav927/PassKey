@@ -13,5 +13,7 @@
 .mainFrame{
     height: 79%;
     border: 1px solid transparent;
+    overflow: hidden;
+    position: relative;
 }
 

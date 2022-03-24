@@ -76,4 +76,6 @@ const EditModal = (props) => {
     </div>
   );
 };
+
 export default EditModal;
+
