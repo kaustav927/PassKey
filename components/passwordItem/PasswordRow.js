@@ -50,6 +50,7 @@ const PasswordRow = (props) => {
             <li className={classes.options}> . . . </li>
         </ul>  
         
+
     );
 }
 
@@ -58,3 +59,4 @@ export default PasswordRow;
 /**
  * This component renders each password item in the passwords list/table.
  */
+
