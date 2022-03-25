@@ -25,7 +25,7 @@ const SignIn = (props) => {
     return(
         <Fragment>
             <form className={`row pl-5 m-b-0 ${classes.signIn}`}>
-                <dl class="row mt-4 pb-0 border border-secondary rounded">
+                <dl className="row mt-4 pb-0 border border-secondary rounded">
                 
                     <div className={`mb-3 ${classes.inputArea}`}>
                         <label htmlFor="exampleDropdownFormEmail" className="form-label"> Email </label>
@@ -37,7 +37,7 @@ const SignIn = (props) => {
                         <input type="password" className="form-control" id="exampleDropdownFormPassword" placeholder="Password" ref={passwordInputRef}></input>
                     </div>
                 
-                    <button type='submit' class={`btn mb-3 h-9 btn-primary btn-sm w-10 ${classes.btnStyle}`} onClick={switchAuthModeHandler}>
+                    <button type='submit' className={`btn mb-3 h-9 btn-primary btn-sm w-10 ${classes.btnStyle}`} onClick={switchAuthModeHandler}>
                         <Link href="/passwordsList" class="btn btn-primary btn-sm w-10"> Sign in </Link>
                     </button>
                 </dl>
