@@ -32,34 +32,10 @@ const dummyPassword = [
 
 
 
-const PasswordsList = () => {
-
-    //dummy passwords list
-    const [dummyPasswords,setDummyPasswords] = useState([
-        {id: 1, name: "Facebook.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "green"},
-    {id: 2, name: "Amazon.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "green"},
-    {id: 3, name: "Amazon.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "green"},
-    {id: 4, name: "Amazon.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "yellow"},
-    {id: 5, name: "Amazon.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "red"},
-    {id: 6, name: "Amazon.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "yellow"},
-    {id: 7, name: "Facebook.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "yellow"},
-    {id: 8, name: "Facebook.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "green"},
-    {id: 9, name: "Facebook.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "red"},
-    {id: 10, name: "Amazon.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "yellow"},
-    {id: 11, name: "Amazon.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "red"},
-    {id: 12, name: "Facebook.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "yellow"},
-    {id: 13, name: "Amazon.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "red"},
-    {id: 14, name: "Amazon.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "green"},
-    {id: 15, name: "Amazon.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "green"}
-    ]);
-
-    //Setting pagination for password table**
-
-    const [topMostPassIndex, setTopMostPassIndex] = useState(0);   //saves the index of top most password element on the page
-    let pageSize = 6;                                              //number of password elements per page
+                                     //number of password elements per page
 
 
-const PasswordsList = () => {
+const PasswordList = () => {
     const [dummyPasswords,setDummyPasswords] = useState([
         {id: 1, name: "Facebook.ca", description: "Lorem ipsum dolor sit", status: "active"},
         {id: 2, name: "Amazon.ca", description: "Lorem ipsum dolor sit", status: "active"},
@@ -112,8 +88,6 @@ const PasswordsList = () => {
 
     //Setting edit password modal** 
 
-    const [openEdit, setEdit]=useState(false)
-
     const onEditClick = (id) => {
         console.log(id);
         setEdit(true)
@@ -138,31 +112,7 @@ const PasswordsList = () => {
     }
 
     
-    const onEditClick = (id) => {
-        console.log(id);
-        setEdit(true)
-    }
-
-    const onEditClose = (id) => {
-        console.log('close' ,id)
-        setEdit(false)
-    }
-    const onEditSave = (id) => {
-        console.log('save' ,id)
-        var answer = window.confirm("Save data?");
-        if (answer) {
-            setEdit(false)
-        }
-        else {
-            setEdit(true)
-        }
-    }
-
-    const onDelete= (id) => {
-        console.log('delete',id)
-        setDummyPasswords(dummyPasswords.filter((pass) => pass.id !== id))
-    }
-
+  
 
     return(
 
@@ -204,5 +154,4 @@ const PasswordsList = () => {
     );
 };
 
-export default PasswordsList;
-
+export default PasswordList;
