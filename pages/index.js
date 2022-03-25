@@ -1,10 +1,10 @@
 import Layout from '../components/layout/Layout';
-import Login from './login';
+import Login from './login/login';
 import React, {useState} from "react";
 
 const Home = () => {
 
-    const [isAuthenticated, setIsAuthenticated] = useState(true);
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
     if(!isAuthenticated) return <Login/>;    //if the user is not authenticated, the user cannot access the main page. The login page will be rendered. 
 
     return (

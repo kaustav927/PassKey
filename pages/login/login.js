@@ -1,7 +1,8 @@
 import React from 'react'
 //import {Fa} from 'react-icons/fa'
+import DataHandler from './DataHandler'
 function Login() {
-    
+  
   return (
     <div className="grid place-items-center h-screen text-center">
       
@@ -29,7 +30,11 @@ function Login() {
                 <input type="email" ></input>
               </div>
          
-            <button className="mt-4 border-2 border-slate-300 px-12 py-2 hover:bg-slate-200 hover:text-black">Sign in</button>
+            <button
+              onClick={DataHandler('VB94o2tMLgmy3TPi9ewy','add')}
+              className="mt-4 border-2 border-slate-300 px-12 py-2 hover:bg-slate-200 hover:text-black">
+              Sign in
+            </button>
           </div>
 
           
