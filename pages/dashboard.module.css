@@ -1,4 +1,14 @@
 
 .image{
-     margin-left: 20.2%;
+     margin-left: 25.2%;
 }
+
+.Graph {
+     position: absolute;
+     top: 0%;
+     left: 50%;
+     /* border-style: groove; */
+     font-family: sans-serif;
+     text-align: center;
+     border:2px groove lightgrey;
+  }
