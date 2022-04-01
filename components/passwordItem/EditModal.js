@@ -4,7 +4,7 @@ const EditModal = (props) => {
   return (
     <>
     
-    <div className="flex w-1/4 object-left">
+    <div className="flex align-items-right">
 
     </div>
     <div className="object-right flex flex-col flex-center bg-slate-20 rounded border border-2 w-3/4 ">
