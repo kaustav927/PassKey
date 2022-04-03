@@ -3,7 +3,9 @@ import Image from 'next/image';
 import mypic from '../img/dash_piechart.png';
 import styles from "./dashboard.module.css";
 import React, { useState, useCallback } from "react";
-import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from "recharts";
+import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Cell} from "recharts";
+    //set bar colours green, yello, red
+    const barColors = ["#008000", "#f2f236", "#f44336"]
 
     // set the data
     const data = [
@@ -32,7 +34,7 @@ const Dashboard = () => {
             
             {/* the following handles the bar graph */}
             <div className={styles.Graph}>
-              <h1>Ratio of Password Strength</h1>
+              <h4>Ratio of Password Strength</h4>
               <BarChart
                 width={600}
                 height={400}
@@ -43,14 +45,27 @@ const Dashboard = () => {
                   left: 20,
                   bottom: 5
                 }}
-                barSize={30}
+                barSize={70}
               >
-                <XAxis dataKey="name" scale="point" padding={{ left: 30, right: 10 }} />
+                <XAxis dataKey="name" scale="point" padding={{ left: 36, right: 35 }} />
                 <YAxis />
                 <Tooltip />
                 <Legend />
                 <CartesianGrid strokeDasharray="3 3" />
-                <Bar dataKey="passwords" fill="#8884d8" background={{ fill: "#eee" }} />
+                <Bar dataKey="passwords">
+                  {
+                    data.map((entry, index) => {
+                        let color = barColors[0];
+                        if (index == 1){
+                         color = barColors[1];
+                        }
+                        else if (index == 2){
+                          color = barColors[2];
+                        }
+                        return <Cell fill={color}/>;
+                    })
+                  }
+                </Bar> 
               </BarChart>
             </div>
 
