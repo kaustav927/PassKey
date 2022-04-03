@@ -4,7 +4,7 @@ import mypic from '../img/dash_piechart.png';
 import styles from "./dashboard.module.css";
 import React, { useState, useCallback } from "react";
 import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Cell} from "recharts";
-    //set bar colours green, yello, red
+    //set bar colours: green, yello, red
     const barColors = ["#008000", "#f2f236", "#f44336"]
 
     // set the data
