@@ -2,55 +2,53 @@ import React from "react";
 
 const EditModal = (props) => {
   return (
-    <>
+
     
-    <div className="flex align-items-right">
 
-    </div>
-    <div className="object-right flex flex-col flex-center bg-slate-20 rounded border border-2 w-3/4 ">
 
-      <h1 className="flex justify-center py-3 mt-5 text-xl">Edit Password</h1>
+    <div className="ml-[20%] flex flex-col flex-center bg-slate-20 rounded border-2 h-90 w-3/4 ">
+
+      <h1 className="flex justify-center mt-2 text-2xl">Edit Password</h1>
 
       <div className="flex">
-        <div className="p-8 ml-16 justify-center items-center w-1/2">
 
+        <div className="p-8 ml-16 justify-center items-center w-1/2">
           <form className="flex flex-col">
-            <h1 className="text-left mb-1 mt-3">Title</h1>
+            <h1 className="text-left text-xl mb-3 mt-[0.5rem]">Title</h1>
             <input
               className="bg-gray-200 shadow-inner rounded p-2 flex-1"          
               type="email"
               aria-label="email address"
               placeholder="Enter Account Title"
             />
-            <h1 className="text-left mb-1 mt-3">User Name / Email</h1>
+            <h1 className="text-left text-xl mb-2 mt-3">User Name / Email</h1>
             <input
               className="bg-gray-200 shadow-inner rounded p-2 flex-1"          
               type="email"
               aria-label="email address"
               placeholder="Enter Account Username of Email"
             />
-            <h1 className="text-left mb-1 mt-3">Password</h1>
+            <h1 className="text-left text-xl mb-2 mt-3">Password</h1>
             <input
               className="bg-gray-200 shadow-inner rounded p-2 flex-1"
               type="email"
               aria-label="email address"
               placeholder="Enter Account Password"
             />
-            <h1 className="text-left mb-1 mt-3">Re-Enter Password</h1>
+            <h1 className="text-left text-xl mb-2 mt-3">Re-Enter Password</h1>
             <input
               className="bg-gray-200 shadow-inner rounded p-2 flex-1"
               type="email"
               aria-label="email address"
               placeholder="Re-Enter Account Password"
             />
-            <h1 className="text-left mb-1 mt-3">URL</h1>
+            <h1 className="text-left text-xl mb-2 mt-3">URL</h1>
             <input
               className="bg-gray-200 shadow-inner rounded p-2 flex-1"
               type="email"
               aria-label="email address"
               placeholder="Website URL"
             />
-            
           </form>
         </div>
         
@@ -78,9 +76,8 @@ const EditModal = (props) => {
         </div>
       </div>
     </div>
-    </>
-   
-  );
+
+    );
 };
 
 export default EditModal;
