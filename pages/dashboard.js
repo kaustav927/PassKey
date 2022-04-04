@@ -62,7 +62,7 @@ const Dashboard = () => {
                         else if (index == 2){
                           color = barColors[2];
                         }
-                        return <Cell fill={color}/>;
+                        <Cell fill={color}/>
                     })
                   }
                 </Bar> 
