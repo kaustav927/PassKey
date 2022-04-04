@@ -1,6 +1,6 @@
 import Layout from '../components/layout/Layout';
 import Image from 'next/image';
-//import mypic from '../img/dash_piechart.png';
+import mypic from '../img/dash_piechart.png';
 import styles from "./dashboard.module.css";
 import React, { useState, useCallback } from "react";
 import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Cell} from "recharts";
@@ -25,7 +25,7 @@ const Dashboard = () => {
     return(
         <Layout>
             {/* this is the pie chart image */}
-            <div className={styles.image}><Image src={'../img/dash_piechart.png'} alt="Simple chart num of users"/></div>
+            <div className={styles.image}><Image src={mypic} alt="Simple chart num of users"/></div>
             
             {/* the following handles the bar graph */}
             <div className={styles.Graph}>
