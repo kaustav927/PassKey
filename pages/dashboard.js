@@ -12,17 +12,17 @@ import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Cell} from 
       {
         name: "Strong",
         passwords: 7,
-        color:"#008000" 
+        
       },
       {
         name: "Medium",
         passwords: 4,
-        color: "#f2f236"
+        
       },
       {
         name: "Weak",
         passwords: 4,
-        color: "#f44336"
+        
       },
       
     ];
@@ -58,14 +58,14 @@ const Dashboard = () => {
                 <Bar dataKey="passwords">
                   {
                     data.map((index) => {
-                        
-                        if (index.color == barColors[1]){
+                      let color = barColors[0];
+                      if (index.name == 'Medium'){
                          color = barColors[1];
                         }
-                        else if (index.color == barColors[2]){
+                      else if (index.name == 'Weak'){
                           color = barColors[2];
                         }
-                        <Cell fill={color}/>;
+                      return <Cell fill={color}/>;
                     })
                   }
                 </Bar> 
