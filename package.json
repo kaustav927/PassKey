@@ -12,6 +12,7 @@
     "bootstrap": "^5.1.3",
     "bootstrap-icons": "^1.8.1",
     "firebase": "^8.10.1",
+    "generate-password": "^1.7.0",
     "lodash": "^4.17.21",
     "next": "12.1.0",
     "react": "17.0.2",
@@ -19,6 +20,7 @@
     "react-copy-to-clipboard": "^5.0.4",
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
+    "react-password-strength-bar": "^0.4.0",
     "react-responsive-modal": "^6.2.0",
     "reactjs-popup": "^2.0.5",
     "recharts": "^2.1.9"

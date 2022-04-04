@@ -101,7 +101,8 @@ const PasswordList = () => {
         <Layout
         footerComponent={ <Pagination topMostIndexHandler={topMostIndexHandler} passwordsInfo={dummyPasswords} pageSize={pageSize} address={'passwordsList'} topMostPassIndex={topMostPassIndex}/>}>
             {openEdit ? <EditModal isOpen={openEdit} onEditClose={onEditClose}/> :
-            <><Search></Search>
+            <div className="h-full">
+            <Search></Search>
             <ul className={classes.passwordTable}>  
 
                 <li className={classes.header}>
@@ -125,7 +126,7 @@ const PasswordList = () => {
                         </li>
                     ))}               
             </ul>
-            </>
+            </div>
             }
             <Modal open={isOpen} onClose={closeModalHandler} currentPassword={password} portalClassName={classes.Modal} overlayClassName={classes.customModal} >
                 <PasswordModal open={isOpen} onClose={closeModalHandler} currentPassword={password} className={classes.modal}></PasswordModal>
