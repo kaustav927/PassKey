@@ -1,19 +1,29 @@
 import Layout from '../components/layout/Layout';
-import Login from './login';
+import Login from './login/login';
 import React, {useState} from "react";
 
 const Home = () => {
 
-    const [isAuthenticated, setIsAuthenticated] = useState(true);
-    if(!isAuthenticated) return <Login/>;    //if the user is not authenticated, the user cannot access the main page. The login page will be rendered. 
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+      //if the user is not authenticated, the user cannot access the main page. The login page will be rendered. 
+
+    const onLogin =()=>{
+        console.log('clicked login')
+        setIsAuthenticated(true);
+    }
 
     return (
-        <Layout>
-            <h3>home</h3>
-        </Layout>               //when user authenticate, he/she will be guided to the main page.
+        
+        isAuthenticated ? 
+        <Layout>     
+            <h3>Home</h3> 
+        </Layout>
+        : 
+        <Login onLogin={onLogin}/>
+        
     )
 }
-
+//when user authenticate, he/she will be guided to the main page.
 export default Home;
 
 /**

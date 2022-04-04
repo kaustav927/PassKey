@@ -12,24 +12,6 @@ import EditModal from '../components/passwordItem/EditModal';
 import Search from '../components/search';
 
 //dummy passwords list
-const dummyPassword = [
-    {id: 1, name: "Facebook.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "green"},
-    {id: 2, name: "Amazon.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "green"},
-    {id: 3, name: "Amazon.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "green"},
-    {id: 4, name: "Amazon.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "yellow"},
-    {id: 5, name: "Amazon.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "red"},
-    {id: 6, name: "Amazon.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "yellow"},
-    {id: 7, name: "Facebook.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "yellow"},
-    {id: 8, name: "Facebook.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "green"},
-    {id: 9, name: "Facebook.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "red"},
-    {id: 10, name: "Amazon.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "yellow"},
-    {id: 11, name: "Amazon.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "red"},
-    {id: 12, name: "Facebook.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "yellow"},
-    {id: 13, name: "Amazon.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "red"},
-    {id: 14, name: "Amazon.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "green"},
-    {id: 15, name: "Amazon.ca", password: "12345", description: "Lorem ipsum dolor sit", status: "active", passStrength: "green"}
-]
-
 
 
                                      //number of password elements per page
@@ -65,10 +47,10 @@ const PasswordList = () => {
 
     //splits the part of data that is going to be displayed in the first page
 
-    const firstPagePass = dummyPassword.slice(0, pageSize);
+    const firstPagePass = dummyPasswords.slice(0, pageSize);
 
     //splits the part of data that is going to be displayed in the other pages
-    const otherPagesPass = paginate(dummyPassword, topMostPassIndex, pageSize);
+    const otherPagesPass = paginate(dummyPasswords, topMostPassIndex, pageSize);
 
 
     //Setting password information modal**
@@ -117,7 +99,7 @@ const PasswordList = () => {
     return(
 
         <Layout
-        footerComponent={ <Pagination topMostIndexHandler={topMostIndexHandler} passwordsInfo={dummyPassword} pageSize={pageSize} address={'passwordsList'} topMostPassIndex={topMostPassIndex}/>}>
+        footerComponent={ <Pagination topMostIndexHandler={topMostIndexHandler} passwordsInfo={dummyPasswords} pageSize={pageSize} address={'passwordsList'} topMostPassIndex={topMostPassIndex}/>}>
             {openEdit ? <EditModal isOpen={openEdit} onEditClose={onEditClose}/> :
             <><Search></Search>
             <ul className={classes.passwordTable}>  
@@ -137,7 +119,7 @@ const PasswordList = () => {
                         <PasswordRow passwordInfo={listItem} clickedPasswordItem={clickedPasswordItem} onEditClick={onEditClick} onEditSave={onEditSave} onDelete={onDelete}></PasswordRow>
                     </li>
                 ))}
-                {(0 < topMostPassIndex) && (topMostPassIndex < dummyPassword.length) && (otherPagesPass.map(listItem => 
+                {(0 < topMostPassIndex) && (topMostPassIndex < dummyPasswords.length) && (otherPagesPass.map(listItem => 
                     <li key={listItem.id} className={classes.passwordItem}>
                         <PasswordRow passwordInfo={listItem} clickedPasswordItem={clickedPasswordItem} onEditClick={onEditClick} onEditSave={onEditSave} onDelete={onDelete}></PasswordRow>
                         </li>
