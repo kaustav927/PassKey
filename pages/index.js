@@ -1,7 +1,7 @@
 import Layout from '../components/layout/Layout';
 import Login from './login/login';
 import React, {useState} from "react";
-
+import PasswordList from './passwordsList'
 const Home = () => {
 
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -15,9 +15,9 @@ const Home = () => {
     return (
         
         isAuthenticated ? 
-        <Layout>     
-            <h3>Home</h3> 
-        </Layout>
+       
+            <PasswordList/>
+      
         : 
         <Login onLogin={onLogin}/>
         
