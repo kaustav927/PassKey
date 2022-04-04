@@ -1,39 +1,31 @@
 import Layout from '../components/layout/Layout';
 import Image from 'next/image';
-import mypic from '../img/dash_piechart.png';
+//import mypic from '../img/dash_piechart.png';
 import styles from "./dashboard.module.css";
 import React, { useState, useCallback } from "react";
 import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Cell} from "recharts";
-    //set bar colours: green, yello, red
-    const barColors = ["#008000", "#f2f236", "#f44336"]
 
-    // set the data
-    const data = [
-      {
-        name: "Strong",
-        passwords: 7,
-        
-      },
-      {
-        name: "Medium",
-        passwords: 4,
-        
-      },
-      {
-        name: "Weak",
-        passwords: 4,
-        
-      },
-      
-    ];
-  
+// set the data
+const data = [
+    {
+      name: "Strong",
+      passwords: 7,   
+    },
+    {
+      name: "Medium",
+      passwords: 4,
+    },
+    {
+      name: "Weak",
+      passwords: 4,
+    },
+  ];
 
 const Dashboard = () => {
-
     return(
         <Layout>
             {/* this is the pie chart image */}
-            <div className={styles.image}><Image src={mypic} alt="Simple pie chart of number of users"/></div>
+            <div className={styles.image}><Image src={'../img/dash_piechart.png'} alt="Simple chart num of users"/></div>
             
             {/* the following handles the bar graph */}
             <div className={styles.Graph}>
@@ -63,20 +55,4 @@ const Dashboard = () => {
           
     );
 };
-
-{/* <Bar dataKey="passwords">
-                  {
-                     data.map((index) => {
-                      let color = barColors[0];
-                      if (index.name == 'Medium'){
-                         color = barColors[1];
-                        }
-                      else if (index.name == 'Weak'){
-                          color = barColors[2];
-                        }
-                      return <Cell fill={color}/>;
-                    })
-                  }
-                </Bar>  */}
-
 export default Dashboard;
