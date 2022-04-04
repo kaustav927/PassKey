@@ -55,9 +55,18 @@ const Dashboard = () => {
                 <Tooltip />
                 <Legend />
                 <CartesianGrid strokeDasharray="3 3" />
-                <Bar dataKey="passwords">
+                <Bar dataKey="passwords" fill="#8884d8" /> 
+              </BarChart>
+            </div>
+
+        </Layout>
+          
+    );
+};
+
+{/* <Bar dataKey="passwords">
                   {
-                    data.map((index) => {
+                     data.map((index) => {
                       let color = barColors[0];
                       if (index.name == 'Medium'){
                          color = barColors[1];
@@ -68,13 +77,6 @@ const Dashboard = () => {
                       return <Cell fill={color}/>;
                     })
                   }
-                </Bar> 
-              </BarChart>
-            </div>
-
-        </Layout>
-          
-    );
-};
+                </Bar>  */}
 
 export default Dashboard;
